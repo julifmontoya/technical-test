@@ -23,7 +23,6 @@ python manage.py runserver
 ```
 
 #### Crear producto
-#### Para crear un nuevo producto, realiza una solicitud POST a:
 ```bash
   POST /v1/products/create/
 ```
@@ -40,8 +39,6 @@ python manage.py runserver
 ```
 
 #### Crear lote
-#### Para crear un nuevo lote, realiza una solicitud POST a:
-
 ```bash
 POST /v1/products/batches/create/
 ```
@@ -58,8 +55,6 @@ GET /v1/products/transactions/
 ```
 
 #### Crear transacción
-#### Puedes elegir entre entry o exit para el tipo de transacción.
-
 ```bash
 POST /v1/products/transactions/create/
 ```
