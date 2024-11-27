@@ -16,68 +16,56 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-## 2. Listado de productos
-```http
+## 2. Endpoints
+#### Listado de productos
+```bash
   GET /v1/products/
 ```
 
-## 3. Crear producto
+#### Crear producto
 #### Para crear un nuevo producto, realiza una solicitud POST a:
-
 ```bash
-http://127.0.0.1:8000/v1/products/create/
+  POST /v1/products/create/
 ```
 
-JSON:
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `code`      | `string` | **Required** |
+| `name`      | `string` | **Required** |
+
+
+#### Listado de lotes
 ```bash
-{
-    "code": "A!",
-    "name": "asas"
-}
+  GET /v1/products/batches/
 ```
 
-## 4. Listado de lotes
-#### Para obtener el listado de lotes, realiza una solicitud GET a:
-
-```bash
-http://127.0.0.1:8000/v1/products/batches/
-```
-
-## 5. Crear lote
+#### Crear lote
 #### Para crear un nuevo lote, realiza una solicitud POST a:
 
 ```bash
-http://127.0.0.1:8000/v1/products/batches/create/
+POST /v1/products/batches/create/
 ```
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `product`      | `id` | **Required** |
+| `expiration_date`      | `date` | **Required** |
+| `quantity`      | `int` | **Required** |
 
-JSON:
+
+#### Listado de transacciones
 ```bash
-{
-    "product": 1,
-    "expiration_date": "2024-12-01",
-    "quantity": 1
-}
+GET /v1/products/transactions/
 ```
 
-## 6. Listado de transacciones
-#### Para obtener el listado de transacciones, realiza una solicitud GET a:
-
-```bash
-http://127.0.0.1:8000/v1/products/transactions/
-```
-
-## 7. Crear transacción
+#### Crear transacción
 #### Puedes elegir entre entry o exit para el tipo de transacción.
 
 ```bash
-http://127.0.0.1:8000/v1/products/transactions/create/
+POST /v1/products/transactions/create/
 ```
 
-JSON:
-```bash
-{
-"batch": 6,
-"transaction_type": "entry",
-"quantity": 1
-}
-```
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `batch"`      | `id` | **Required** |
+| `transaction_type`      | `str` | **entry or exit** |
+| `quantity`      | `int` | **Required** |
