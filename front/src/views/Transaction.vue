@@ -2,7 +2,7 @@
   <div class="max-width">
     <!-- Product Selection -->
     <div class="mb-15">
-      <label for="product" class="form-label">Select Product</label>
+      <label for="product" class="form-label">Lotes</label>
       <select v-model="selectedProduct" id="product">
         <option v-for="batch in batches" :key="batch.id" :value="batch.id">
           {{ batch.name }} ({{ batch.expiration_date }})
@@ -10,21 +10,19 @@
       </select>
     </div>
     <div class="mb-15">
-      <label for="transaction_type" class="form-label"
-        >Select Transaction Type</label
-      >
+      <label for="transaction_type" class="form-label">Transaccion</label>
       <select v-model="transaction_type" id="transaction_type">
-        <option value="entry">Entry</option>
-        <option value="exit">Exit</option>
+        <option value="entry">Entrada</option>
+        <option value="exit">Salida</option>
       </select>
     </div>
     <div class="mb-15">
-      <label for="quantity" class="form-label">Quantity</label>
+      <label for="quantity" class="form-label">Cantidad</label>
       <input type="number" v-model="quantity" id="quantity" />
     </div>
     <div class="mb-15">
       <button type="button" class="btn btn--blue" @click="submitForm">
-        Submit
+        Enviar
       </button>
     </div>
 
@@ -33,13 +31,12 @@
     <table class="transaction-table">
       <thead>
         <tr>
-          <th>Code</th>
-          <th>Name</th>
-          <th>Batch</th>
-          <th>Transaction Type</th>
-          <th>Quantity</th>
-          <th>Total Quantity</th>
-          <th>Timestamp</th>
+          <th>Codigo</th>
+          <th>Nombre</th>
+          <th>Transaccion</th>
+          <th>Cantidad</th>
+          <th>Cantidad total</th>
+          <th>Fecha</th>
         </tr>
       </thead>
       <tbody>
@@ -47,8 +44,7 @@
         <tr v-for="transaction in transactions" :key="transaction.id">
           <td>{{ transaction.code }}</td>
           <td>{{ transaction.name }}</td>
-          <td>{{ transaction.batch }}</td>
-          <td>{{ transaction.transaction_type }}</td>
+           <td>{{ transaction.transaction_type }}</td>
           <td>{{ transaction.quantity }}</td>
           <td>{{ transaction.total_quantity }}</td>
           <td>{{ formatTimestamp(transaction.timestamp) }}</td>
@@ -58,7 +54,7 @@
 
     <!-- Back Button -->
     <div class="text-center">
-      <button type="button" class="btn btn--white" @click="goBack">Back</button>
+      <button type="button" class="btn btn--white" @click="goBack">Atras</button>
     </div>
   </div>
 </template>

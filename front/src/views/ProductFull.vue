@@ -1,10 +1,10 @@
 <template>
   <div class="max-width">
-    <h1>Product Batches</h1>
+    <h1 class="mb-15">Lotes de producto</h1>
 
     <!-- Search input to filter by product name -->
     <BaseInput
-      label="Filter by Name:"
+      label="Filtro:"
       placeholder="Escribe el nombre"
       v-model="nameFilter"
       type="text"
@@ -15,10 +15,10 @@
     <table class="product-table">
       <thead>
         <tr>
-          <th>Code</th>
-          <th>Name</th>
-          <th>Expiration Date</th>
-          <th>Quantity</th>
+          <th>Codigo</th>
+          <th>Nombre</th>
+          <th>Vencimiento</th>
+          <th>Cantidad</th>
           <th>Status</th>
         </tr>
       </thead>
@@ -36,7 +36,7 @@
   </div>
   <!-- Back Button -->
   <div class="text-center">
-    <button type="button" class="btn btn--white" @click="goBack">Back</button>
+    <button type="button" class="btn btn--white" @click="goBack">Atras</button>
   </div>
 </template>
 

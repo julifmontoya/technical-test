@@ -1,10 +1,10 @@
 <template>
   <div class="max-width">
     <form @submit.prevent="createProduct">
-      <h1 class="mb-15">Product details</h1>
+      <h1 class="mb-15">Detalles del producto</h1>
       <div class="flex-space-between-wrap">
         <BaseInput
-          label="Product Code:"
+          label="Codigo:"
           placeholder="Escribe el codigo"
           v-model="product.code"
           type="text"
@@ -12,7 +12,7 @@
           :dynamicClass="'col48xs'"
         />
         <BaseInput
-          label="Product Name:"
+          label="Nombre:"
           placeholder="Escribe el nombre"
           v-model="product.name"
           type="text"
@@ -26,9 +26,9 @@
       </div>
 
       <div class="text-center">
-        <button type="submit" class="btn btn--blue mr-10">Create</button>
+        <button type="submit" class="btn btn--blue mr-10">Crear</button>
         <button type="button" class="btn btn--white" @click="goBack">
-          Back
+          Atras
         </button>
       </div>
     </form>
