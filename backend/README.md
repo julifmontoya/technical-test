@@ -17,10 +17,8 @@ python manage.py runserver
 ```
 
 ## 2. Listado de productos
-#### Para obtener el listado de productos, realiza una solicitud GET a:
-
-```bash
-http://127.0.0.1:8000/v1/products/
+```http
+  GET /v1/products/
 ```
 
 ## 3. Crear producto
