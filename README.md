@@ -1,14 +1,19 @@
 # Inventarios Backend
 ## 1. Instalación
 - Instala las dependencias necesarias:
-
 ```bash
-npm install
+pip install -r requirements.txt
 ```
-- Inicia el servidor de desarrollo:
 
+- Crea las migraciones y aplica los cambios a la base de datos:
 ```bash
-npm run dev
+python manage.py makemigrations
+python manage.py migrate
+```
+
+- Inicia el servidor de desarrollo:
+```bash
+python manage.py runserver
 ```
 # Inventarios Front
 ## 1. Instalación
