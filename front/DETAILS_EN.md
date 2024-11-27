@@ -6,12 +6,12 @@
 - Centralized Services: The service.js file uses Axios to centralize HTTP request logic, simplifying global changes such as configuring the baseURL from environment variables.
 
 #### State Management with ref and computed:
-- Reactive variables such as products, isOpen, and batchData were used to handle dynamic data.
-- Computed properties like filteredProducts enable functionalities such as filtering without the need for additional complex logic.
+-Reactive variables such as products, isOpen, and batchData were used to handle dynamic data.
+-Computed properties like filteredProducts enable functionalities such as filtering without the need for additional complex logic.
 
 #### Presentation Layer:
-- Well-structured <template> blocks are used to display data in tables and forms.
-- Modals and inputs are designed to be reusable and adaptable.
+-Well-structured <template> blocks are used to display data in tables and forms.
+-Modals and inputs are designed to be reusable and adaptable.
 
 #### User Interaction:
 - Modal forms and alerts provide an intuitive flow for creating and viewing product batches
