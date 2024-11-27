@@ -10,7 +10,7 @@
 - Computadas como filteredProducts permiten implementar funcionalidades como el filtrado sin necesidad de lógica compleja adicional.
 
 #### Capa de Presentación:
-- Uso de plantillas <template> bien estructuradas para mostrar datos en tablas y formularios.
+- Uso de plantillas bien estructuradas para mostrar datos en tablas y formularios.
 - Modales e inputs están diseñados para ser reutilizables y adaptables.
 
 #### Interacción con el Usuario:
