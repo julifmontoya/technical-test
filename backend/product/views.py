@@ -62,6 +62,7 @@ class TransactionList(ListAPIView):
     queryset = Transaction.objects.all()
     serializer_class = TransactionSerializer
 
+
 class TransactionCreate(CreateAPIView):
     queryset = Transaction.objects.all()
     serializer_class = TransactionCreateSerializer
@@ -69,12 +70,12 @@ class TransactionCreate(CreateAPIView):
     def perform_create(self, serializer):
         # Create the transaction instance but do not save it yet
         transaction = serializer.validated_data
-
-        batch = transaction['batch']  # Assuming 'batch' is passed in validated data
+        batch = transaction['batch']
 
         # Validate the transaction logic
         if transaction['transaction_type'] == 'exit' and batch.quantity < transaction['quantity']:
-            raise ValidationError("Not enough stock in this batch to make this exit.")
+            raise ValidationError(
+                "Not enough stock in this batch to make this exit.")
 
         # Update the batch quantity based on the transaction type
         if transaction['transaction_type'] == 'entry':
