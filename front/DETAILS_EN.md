@@ -10,7 +10,7 @@
 - Computed properties like filteredProducts enable functionalities such as filtering without the need for additional complex logic.
 
 #### Presentation Layer:
-- Well-structured <template> blocks are used to display data in tables and forms.
+- Well-structured blocks are used to display data in tables and forms.
 - Modals and inputs are designed to be reusable and adaptable.
 
 #### User Interaction:
