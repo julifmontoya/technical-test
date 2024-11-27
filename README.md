@@ -29,10 +29,11 @@ npm run dev
 
 ## Screenshots
 ![App Screenshot](https://github.com/julifmontoya/technical-test/blob/master/picts/1.JPG)
+![App Screenshot](https://github.com/julifmontoya/technical-test/blob/master/picts/5.JPG)
 ![App Screenshot](https://github.com/julifmontoya/technical-test/blob/master/picts/2.JPG)
 ![App Screenshot](https://github.com/julifmontoya/technical-test/blob/master/picts/3.JPG)
 ![App Screenshot](https://github.com/julifmontoya/technical-test/blob/master/picts/4.JPG)
-![App Screenshot](https://github.com/julifmontoya/technical-test/blob/master/picts/5.JPG)
+
 
 
 
