@@ -30,11 +30,11 @@ class ProductBatch(models.Model):
         """Status of the individual batch."""
         today = timezone.now().date()
         if self.expiration_date < today:
-            return "Expired"
+            return "Vencido"
         elif self.expiration_date <= today + timedelta(days=3):
-            return "Expiring"
+            return "Por vencer"
         else:
-            return "Current"
+            return "Vigente"
 
 class Transaction(models.Model):
     TRANSACTION_TYPES = (
