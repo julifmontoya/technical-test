@@ -22,10 +22,10 @@
 - Métodos de acciones claras (fetchData, submitBatchForm, openBatchModal) garantizan que cada acción esté separada y sea fácil de modificar.
 
 ## 2. Mejoras
-### Paginación y Filtrado
+#### Paginación y Filtrado
 Incorporar paginación y filtros avanzados desde el servidor para manejar grandes cantidades de datos de productos.
 
-### Mejora interfaz de usuario
+#### Mejora interfaz de usuario
 - Implementar carga de estado visual (spinners) mientras se buscan datos.
 - Mejorar la accesibilidad de los modales
 - Formularios con validación más robusta y Soporte para teclado.
